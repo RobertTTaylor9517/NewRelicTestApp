@@ -50,6 +50,7 @@ public class ShopJavaApplication{
 		}
 	}
 	
+	
 	@Bean
 	CommandLineRunner runner(ProductService productService) {
 		return args -> {
