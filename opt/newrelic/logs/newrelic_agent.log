@@ -51,3 +51,29 @@
 2020-08-21T16:40:03,205-0400 [8799 35] com.newrelic INFO: Real user monitoring is enabled for application Java Shopper. Auto instrumentation is enabled.
 2020-08-21T16:40:14,986-0400 [8799 12] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
 2020-08-21T16:40:15,024-0400 [8799 62] com.newrelic INFO: Transaction com.newrelic.agent.Transaction@576780cb tried to finish but ServiceManager not started
+2020-08-21T16:46:33,490-0400 [9441 1] com.newrelic INFO: Writing to New Relic log file: /media/robert/Rob's HardDrive(4706099000)/misc-workspace/shop-java/opt/newrelic/logs/newrelic_agent.log
+2020-08-21T16:46:33,490-0400 [9441 1] com.newrelic INFO: JRE vendor Oracle Corporation version 13.0.2
+2020-08-21T16:46:33,491-0400 [9441 1] com.newrelic INFO: JVM vendor Oracle Corporation Java HotSpot(TM) 64-Bit Server VM version 13.0.2+8
+2020-08-21T16:46:33,491-0400 [9441 1] com.newrelic INFO: OS Linux version 5.3.0-51-generic arch amd64
+2020-08-21T16:46:33,495-0400 [9441 1] com.newrelic INFO: Agent Host: robert-System-Product-Name IP: 127.0.1.1
+2020-08-21T16:46:33,496-0400 [9441 1] com.newrelic INFO: New Relic Agent v5.14.0 is initializing...
+2020-08-21T16:46:34,302-0400 [9441 17] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2020-08-21T16:46:35,115-0400 [9441 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2020-08-21T16:46:35,376-0400 [9441 1] com.newrelic INFO: Setting audit_mode to false
+2020-08-21T16:46:35,377-0400 [9441 1] com.newrelic INFO: Setting protocol to "https"
+2020-08-21T16:46:35,500-0400 [9441 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /media/robert/Rob's HardDrive(4706099000)/misc-workspace/shop-java/opt/newrelic/./newrelic.yml
+2020-08-21T16:46:35,506-0400 [9441 1] com.newrelic INFO: New Relic Agent v5.14.0 has started
+2020-08-21T16:46:35,506-0400 [9441 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@4ac68d3e
+2020-08-21T16:46:35,507-0400 [9441 1] com.newrelic INFO: Premain startup complete in 2,656ms
+2020-08-21T16:46:43,426-0400 [9441 1] com.newrelic INFO: Server Info: Apache Tomcat/9.0.37
+2020-08-21T16:46:50,506-0400 [9441 36] com.newrelic INFO: Host name is robert-System-Product-Name, display host robert-System-Product-Name for application Java Shopper
+2020-08-21T16:46:50,927-0400 [9441 36] com.newrelic INFO: Collector redirection to collector-010.newrelic.com:443
+2020-08-21T16:46:51,200-0400 [9441 36] com.newrelic INFO: Max payload size is 1,000,000 bytes
+2020-08-21T16:46:51,201-0400 [9441 36] com.newrelic INFO: Agent run id: BUDEoyKvxzJ3ACtIuSq7ORpfQDMAAAIBAAAnIQEAACThAgQquzkYAwAGNS4xNC4wABpyb2JlcnQtU3lzdGVtLVByb2R1Y3QtTmFtZQAMSmF2YSBTaG9wcGVy
+2020-08-21T16:46:51,201-0400 [9441 36] com.newrelic INFO: Agent 9441@robert-System-Product-Name/Java Shopper connected to collector.newrelic.com:443
+2020-08-21T16:46:51,202-0400 [9441 36] com.newrelic INFO: Reporting to: https://rpm.newrelic.com/accounts/2836665/applications/716912920
+2020-08-21T16:46:51,204-0400 [9441 36] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2020-08-21T16:46:51,208-0400 [9441 36] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2020-08-21T16:46:51,500-0400 [9441 36] com.newrelic INFO: Real user monitoring is enabled for application Java Shopper. Auto instrumentation is enabled.
+2020-08-21T16:47:33,175-0400 [9441 12] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2020-08-21T16:47:33,205-0400 [9441 62] com.newrelic INFO: Transaction com.newrelic.agent.Transaction@295dde4c tried to finish but ServiceManager not started
