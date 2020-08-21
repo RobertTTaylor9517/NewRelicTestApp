@@ -10,6 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -21,9 +24,16 @@ public class User {
 	@GeneratedValue
 	private long id;
 	
+	@NotNull
 	private String username;
+	
+	@NotNull
+	@Min(5)
+	@Max(10)
 	private String password;
 	
+	@NotNull
+	@Min(0)
 	private float wallet;
 	
 	@JsonIgnore

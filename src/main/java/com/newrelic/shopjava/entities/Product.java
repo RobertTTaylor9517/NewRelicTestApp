@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -36,6 +37,7 @@ public class Product {
 	@Column(name = "img", columnDefinition = "LONGTEXT")
 	private String img;
 	
+	@Min(0)
 	private Integer quantity;
 	private Integer rating;
 	

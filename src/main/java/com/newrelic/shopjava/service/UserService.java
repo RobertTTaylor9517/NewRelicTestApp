@@ -6,6 +6,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.newrelic.shopjava.entities.Review;
 import com.newrelic.shopjava.entities.User;
 import com.newrelic.shopjava.repo.UserRepository;
 
@@ -37,7 +38,7 @@ public class UserService {
 		user.setWallet(wallet);
 		
 		if(userRepository.save(user) != null) {
-			String token = getJWTToken(user.getUsername(), user.getId());
+			String token = getJWTToken(user.getUsername());
 			map.put("token", token);
 			map.put("user_id", user.getId());
 			
@@ -59,7 +60,7 @@ public class UserService {
 			return map;
 		}else {
 			if(passwordEncoder.matches(password, user.getPassword())) {
-				String token = getJWTToken(username, user.getId());
+				String token = getJWTToken(username);
 				map.put("token", token);
 				map.put("user_id", user.getId());
 				
@@ -71,7 +72,13 @@ public class UserService {
 		}
 	}
 	
-	private String getJWTToken(String username, long id) {
+	public List<Review> getReviews(Long userId){
+		User user = userRepository.getOne(userId);
+		
+		return user.getReviews();
+	}
+	
+	private String getJWTToken(String username) {
 		
 		String secretKey = SECRET;
 		
@@ -86,7 +93,6 @@ public class UserService {
 						grantedAuthorities.stream()
 							.map(GrantedAuthority::getAuthority)
 							.collect(Collectors.toList()))
-				.claim("Id", id)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.signWith(SignatureAlgorithm.HS512, secretKey.getBytes()).compact();
 		

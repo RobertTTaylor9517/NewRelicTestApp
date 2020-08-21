@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -20,7 +23,12 @@ public class Review {
 	@GeneratedValue
 	private long id;
 	
+	@NotNull
+	@Min(3)
+	@Max(500)
 	private String comment;
+	
+	@NotNull
 	private Integer rating;
 	
 	@JsonIgnore
