@@ -28,8 +28,6 @@ public class User {
 	private String username;
 	
 	@NotNull
-	@Min(5)
-	@Max(10)
 	private String password;
 	
 	@NotNull
