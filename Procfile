@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS  -Dserver.port=$PORT -javaagent:app/newrelic/newrelic.jar -jar target/shop-java-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS  -Dserver.port=$PORT -javaagent:opt/newrelic/newrelic.jar -jar target/shop-java-0.0.1-SNAPSHOT.jar
