@@ -45,6 +45,8 @@ public class ShopJavaApplication{
 				.antMatchers("/products").permitAll()
 				.antMatchers("/login").permitAll()
 				.antMatchers("/signup").permitAll()
+				.antMatchers("/user/{id}/review").permitAll()
+				.antMatchers("/product/{id}/review").permitAll()
 				.anyRequest().authenticated();
 					
 		}
