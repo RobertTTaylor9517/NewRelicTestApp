@@ -144,3 +144,54 @@
 2020-08-21T17:46:06,811-0400 [16714 36] com.newrelic INFO: Using default collector host: collector.newrelic.com
 2020-08-21T17:46:07,086-0400 [16714 36] com.newrelic INFO: Real user monitoring is enabled for application Java Shopper. Auto instrumentation is enabled.
 2020-08-21T18:00:02,025-0400 [16714 12] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2020-08-23T11:35:59,720-0400 [25237 1] com.newrelic INFO: Writing to New Relic log file: /media/robert/Rob's HardDrive(4706099000)/misc-workspace/immense-eyrie-31349/opt/newrelic/logs/newrelic_agent.log
+2020-08-23T11:35:59,720-0400 [25237 1] com.newrelic INFO: JRE vendor Oracle Corporation version 13.0.2
+2020-08-23T11:35:59,721-0400 [25237 1] com.newrelic INFO: JVM vendor Oracle Corporation Java HotSpot(TM) 64-Bit Server VM version 13.0.2+8
+2020-08-23T11:35:59,721-0400 [25237 1] com.newrelic INFO: OS Linux version 5.3.0-51-generic arch amd64
+2020-08-23T11:35:59,744-0400 [25237 1] com.newrelic INFO: Agent Host: robert-System-Product-Name IP: 127.0.1.1
+2020-08-23T11:35:59,745-0400 [25237 1] com.newrelic INFO: New Relic Agent v5.14.0 is initializing...
+2020-08-23T11:36:00,672-0400 [25237 17] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2020-08-23T11:36:01,537-0400 [25237 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2020-08-23T11:36:01,821-0400 [25237 1] com.newrelic INFO: Setting audit_mode to false
+2020-08-23T11:36:01,822-0400 [25237 1] com.newrelic INFO: Setting protocol to "https"
+2020-08-23T11:36:01,973-0400 [25237 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /media/robert/Rob's HardDrive(4706099000)/misc-workspace/immense-eyrie-31349/opt/newrelic/./newrelic.yml
+2020-08-23T11:36:01,980-0400 [25237 1] com.newrelic INFO: New Relic Agent v5.14.0 has started
+2020-08-23T11:36:01,980-0400 [25237 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@4ac68d3e
+2020-08-23T11:36:01,981-0400 [25237 1] com.newrelic INFO: Premain startup complete in 2,903ms
+2020-08-23T11:36:09,719-0400 [25237 1] com.newrelic INFO: Server Info: Apache Tomcat/9.0.37
+2020-08-23T11:36:10,302-0400 [25237 12] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2020-08-23T11:36:10,305-0400 [25237 12] com.newrelic.agent.core.CoreServiceImpl INFO: New Relic Agent has shutdown
+2020-08-23T11:38:51,306-0400 [25481 1] com.newrelic INFO: Writing to New Relic log file: /media/robert/Rob's HardDrive(4706099000)/misc-workspace/immense-eyrie-31349/opt/newrelic/logs/newrelic_agent.log
+2020-08-23T11:38:51,307-0400 [25481 1] com.newrelic INFO: JRE vendor Oracle Corporation version 13.0.2
+2020-08-23T11:38:51,307-0400 [25481 1] com.newrelic INFO: JVM vendor Oracle Corporation Java HotSpot(TM) 64-Bit Server VM version 13.0.2+8
+2020-08-23T11:38:51,307-0400 [25481 1] com.newrelic INFO: OS Linux version 5.3.0-51-generic arch amd64
+2020-08-23T11:38:51,311-0400 [25481 1] com.newrelic INFO: Agent Host: robert-System-Product-Name IP: 127.0.1.1
+2020-08-23T11:38:51,312-0400 [25481 1] com.newrelic INFO: New Relic Agent v5.14.0 is initializing...
+2020-08-23T11:38:52,138-0400 [25481 17] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2020-08-23T11:38:52,918-0400 [25481 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2020-08-23T11:38:53,177-0400 [25481 1] com.newrelic INFO: Setting audit_mode to false
+2020-08-23T11:38:53,177-0400 [25481 1] com.newrelic INFO: Setting protocol to "https"
+2020-08-23T11:38:53,340-0400 [25481 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /media/robert/Rob's HardDrive(4706099000)/misc-workspace/immense-eyrie-31349/opt/newrelic/./newrelic.yml
+2020-08-23T11:38:53,347-0400 [25481 1] com.newrelic INFO: New Relic Agent v5.14.0 has started
+2020-08-23T11:38:53,347-0400 [25481 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@4ac68d3e
+2020-08-23T11:38:53,348-0400 [25481 1] com.newrelic INFO: Premain startup complete in 2,660ms
+2020-08-23T11:39:01,042-0400 [25481 1] com.newrelic INFO: Server Info: Apache Tomcat/9.0.37
+2020-08-23T11:39:01,683-0400 [25481 12] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2020-08-23T11:39:01,686-0400 [25481 12] com.newrelic.agent.core.CoreServiceImpl INFO: New Relic Agent has shutdown
+2020-08-23T11:41:24,320-0400 [25774 1] com.newrelic INFO: Writing to New Relic log file: /media/robert/Rob's HardDrive(4706099000)/misc-workspace/immense-eyrie-31349/opt/newrelic/logs/newrelic_agent.log
+2020-08-23T11:41:24,321-0400 [25774 1] com.newrelic INFO: JRE vendor Oracle Corporation version 13.0.2
+2020-08-23T11:41:24,321-0400 [25774 1] com.newrelic INFO: JVM vendor Oracle Corporation Java HotSpot(TM) 64-Bit Server VM version 13.0.2+8
+2020-08-23T11:41:24,322-0400 [25774 1] com.newrelic INFO: OS Linux version 5.3.0-51-generic arch amd64
+2020-08-23T11:41:24,330-0400 [25774 1] com.newrelic INFO: Agent Host: robert-System-Product-Name IP: 127.0.1.1
+2020-08-23T11:41:24,330-0400 [25774 1] com.newrelic INFO: New Relic Agent v5.14.0 is initializing...
+2020-08-23T11:41:25,168-0400 [25774 17] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2020-08-23T11:41:25,948-0400 [25774 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2020-08-23T11:41:26,214-0400 [25774 1] com.newrelic INFO: Setting audit_mode to false
+2020-08-23T11:41:26,215-0400 [25774 1] com.newrelic INFO: Setting protocol to "https"
+2020-08-23T11:41:26,362-0400 [25774 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /media/robert/Rob's HardDrive(4706099000)/misc-workspace/immense-eyrie-31349/opt/newrelic/./newrelic.yml
+2020-08-23T11:41:26,369-0400 [25774 1] com.newrelic INFO: New Relic Agent v5.14.0 has started
+2020-08-23T11:41:26,369-0400 [25774 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@4ac68d3e
+2020-08-23T11:41:26,370-0400 [25774 1] com.newrelic INFO: Premain startup complete in 2,656ms
+2020-08-23T11:41:34,053-0400 [25774 1] com.newrelic INFO: Server Info: Apache Tomcat/9.0.37
+2020-08-23T11:41:34,615-0400 [25774 12] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2020-08-23T11:41:34,619-0400 [25774 12] com.newrelic.agent.core.CoreServiceImpl INFO: New Relic Agent has shutdown
