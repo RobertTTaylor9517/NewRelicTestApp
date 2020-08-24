@@ -9,9 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -24,8 +24,7 @@ public class Review {
 	private long id;
 	
 	@NotNull
-	@Min(3)
-	@Max(500)
+	@Length(min = 3, max = 500)
 	private String comment;
 	
 	@NotNull
