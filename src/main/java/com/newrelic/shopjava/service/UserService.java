@@ -29,9 +29,10 @@ public class UserService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
+	//Method to process signup
 	public HashMap<String, Object> signup(String username, String password, long wallet) {
 		User user = new User();
-		HashMap<String, Object> map = new HashMap<String, Object>();
+		HashMap<String, Object> map = new HashMap<String, Object>(); //Generates HashMap for response
 		
 		user.setUsername(username);
 		user.setPassword(passwordEncoder.encode(password));
@@ -51,6 +52,7 @@ public class UserService {
 		}
 	}
 	
+	//Method to process login
 	public HashMap<String, Object> login(String username, String password) {
 		User user = userRepository.findUserByUsername(username);
 		HashMap<String, Object> map = new HashMap<String, Object>();
@@ -72,29 +74,31 @@ public class UserService {
 		}
 	}
 	
+	//Method to retreive a users reviews
 	public List<Review> getReviews(Long userId){
 		User user = userRepository.getOne(userId);
 		
 		return user.getReviews();
 	}
 	
+	// Method to generate JWT token
 	private String getJWTToken(String username) {
 		
 		String secretKey = SECRET;
 		
-		List<GrantedAuthority> grantedAuthorities = AuthorityUtils
+		List<GrantedAuthority> grantedAuthorities = AuthorityUtils //assigns authorities
 				.commaSeparatedStringToAuthorityList("ROLE_USER");
 		
 		String token = Jwts
 				.builder()
 				.setId("Token")
-				.setSubject(username)
+				.setSubject(username) //inserts username into the token
 				.claim("authorities",
 						grantedAuthorities.stream()
 							.map(GrantedAuthority::getAuthority)
-							.collect(Collectors.toList()))
+							.collect(Collectors.toList())) //inserts authority into token
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.signWith(SignatureAlgorithm.HS512, secretKey.getBytes()).compact();
+				.signWith(SignatureAlgorithm.HS512, secretKey.getBytes()).compact(); //Converts and compacts data into token
 		
 		return "SHOP " + token;
 	}

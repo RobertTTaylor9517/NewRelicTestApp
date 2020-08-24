@@ -24,11 +24,11 @@ import io.jsonwebtoken.UnsupportedJwtException;
 import static com.newrelic.shopjava.security.SecurityConstants.SECRET;
 
 public class JWTAuthFilter extends OncePerRequestFilter {
-	private final String HEADER = "Authorization";
+	private final String HEADER = "Authorization"; 
 	private final String PREFIX = "SHOP";
 
 
-	@Override
+	@Override //Method that filters out token from header to verify data
 	protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws ServletException, IOException {
 		try {
 			if (checkJWTToken(req, res)) {
@@ -47,11 +47,13 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 		}
 	}
 	
+	//Validates token once extracted
 	private Claims validateToken(HttpServletRequest req) {
 		String jwtToken = req.getHeader(HEADER).replace(PREFIX, "");
 		return Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(jwtToken).getBody();
 	}
 	
+	//Sets up authentication for filter
 	private void setUpSpringAuthentication(Claims claims) {
 		@SuppressWarnings("unchecked")
 		List<String> authorities = (List<String>) claims.get("authorities");
@@ -61,6 +63,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 		SecurityContextHolder.getContext().setAuthentication(auth);
 	}
 	
+	//Gets token from HTTP request
 	private boolean checkJWTToken(HttpServletRequest req, HttpServletResponse res) {
 		String authenticationHeader = req.getHeader(HEADER);
 		if(authenticationHeader == null || !authenticationHeader.startsWith(PREFIX))

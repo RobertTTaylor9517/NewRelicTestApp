@@ -39,11 +39,13 @@ public class MainController {
 	@Autowired
 	private PurchaseService purchaseService;
 	
+	// Gets products from database
 	@GetMapping("products")
 	public List<Product> products(){
 		return (List<Product>) productService.list();
 	}
 	
+	//allows user to login into back-end
 	@PostMapping("login")
 	public Object login(@RequestParam("username") String username, @RequestParam("password") String password) {
 		Object token = userService.login(username, password);
@@ -51,6 +53,7 @@ public class MainController {
 		return token;
 	}
 	
+	//allows user to sign up into backend
 	@PostMapping("signup")
 	public Object signup(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam("wallet") Long wallet) {
 		Object token = userService.signup(username, password, wallet);
@@ -58,15 +61,17 @@ public class MainController {
 		return token;
 	}
 	
+	//Gets currently logged in user
 	@GetMapping("user")
 	public Object getUser() {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication(); //Gets username from JWT token
 		System.out.println(auth);
 		
 		User user = userRepo.findUserByUsername(auth.getPrincipal().toString());
 		return user;
 	}
 	
+	//allows logged in user to review a product
 	@PostMapping("review")
 	public Object addReview(@RequestParam("comment") String comment, @RequestParam("rating") Integer rating, @RequestParam("productId") Long productId) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -76,16 +81,20 @@ public class MainController {
 		return review;
 	}
 	
+	
+	//Gets a specific users reviews
 	@GetMapping(value = "user/{id}/review")
 	public Object getUserReviews(@PathVariable Long id) {
 		return userService.getReviews(id);
 	}
 	
+	//Gets a specific products reviews
 	@GetMapping(value = "product/{id}/review")
 	public Object getProductReviews(@PathVariable Long id) {
 		return productService.getReviews(id);
 	}
 	
+	//Allows loggged in user to make a purchase
 	@PostMapping("purchase")
 	public Object makePurchase(@RequestParam("cart") List<Long> cart) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -94,6 +103,7 @@ public class MainController {
 		return purchaseService.purchase(cart, user);
 	}
 	
+	//Deletes Review
 	@DeleteMapping(value = "review/{id}")
 	public Object deleteReview(@PathVariable Long id) {
 		return reviewService.deleteReview(id);

@@ -5,7 +5,7 @@ Simple E-Commerce Back-end Integrated with New Relic APM for monitoring
 ### See this [project](https://immense-eyrie-31349.herokuapp.com/)
 
 ### Methods Used
-+ uses JWT for authenticaton
++ uses JWT for authentication
 + uses New Relic APM to collect usage data
 + JPA Hibernate
 

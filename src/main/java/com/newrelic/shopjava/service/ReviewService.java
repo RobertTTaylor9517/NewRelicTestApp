@@ -22,8 +22,9 @@ public class ReviewService {
 	@Autowired
 	ProductRepository productRepo;
 	
+	//Method to create review
 	public Review createReview(String comment, Integer rating, User user, long productId) {
-		Product product = productRepo.getOne(productId);
+		Product product = productRepo.getOne(productId); //Gets product from db
 		
 		Review review = new Review();
 		
@@ -35,6 +36,7 @@ public class ReviewService {
 		return reviewRepo.save(review);
 	}
 	
+	//Method to delete Review
 	public String deleteReview(Long id) {
 		try {
 			

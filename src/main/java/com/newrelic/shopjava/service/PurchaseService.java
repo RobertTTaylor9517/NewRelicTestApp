@@ -18,6 +18,8 @@ public class PurchaseService {
 	@Autowired
 	private ProductRepository productRepo;
 	
+	
+	//Method to process user order
 	public String purchase(List<Long> cart, User user) {
 		try {
 			float total = (float) cart.stream().mapToDouble(e -> processProduct(e)).sum();
@@ -34,6 +36,7 @@ public class PurchaseService {
 		
 	}
 	
+	// Method to change a products quantity
 	private Double processProduct(Long prodId) {
 		Product product = productRepo.getOne(prodId);
 		
